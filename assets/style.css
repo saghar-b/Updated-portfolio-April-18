@@ -1,0 +1,170 @@
+:root {
+    --dark-navy: #233554;
+    --light-text: #ccd6f6;
+    --no_color: rgba(0, 0, 0, 0);
+    --baby-blue: rgb(42, 153, 161);
+    --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+    --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --line: rgb(21, 119, 70);
+
+}
+
+.line {
+
+    /* width: 112px; */
+    height: 100%;
+
+    border-right: 1px solid var(--light-text);
+   margin-left: 5px;
+}
+.v-line {
+
+    /* width: 112px; */
+    height: 30%;
+
+    border-left: 1px solid black ;
+  position: absolute;
+  left: 20px;
+}
+
+aside, main {
+    /* background-color: yellow; */
+    /* height: 100%; */
+    color: var(--light-text);
+    font-family: var(--font-sans);
+   
+}
+
+aside {
+/* margin-left:5px; */
+    text-align: center;
+    font-size: var(--fz-lg);
+    padding-right: 5px;
+    /* font-size:xx-large; */
+    /* margin-bottom: 30px; */
+    /* justify-content: right; */
+}
+
+
+span{
+    color: var(--line);
+    font-family: var(--font-mono);
+    font-size: var();
+    padding-right: 5px;
+    
+}
+.navbar> span{
+    
+    padding-right: 2px;  
+
+}
+.navbar {
+    display: list-item;
+    list-style: decimal;
+    color: var(--light-text);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: var(--fz-xxs)
+}
+
+/* side nav */
+
+
+.sidenav {
+    background-color: var(--no_color);
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 50vh;
+    left: 0;
+    /* background-color: #111; */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    margin-left: 0%;
+    padding-left: 0%;
+
+
+}
+
+.sidenav a {
+
+    padding: 8px 8px 8px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+
+.sidenav a:hover {
+    width: 100px;
+    height: 100px;
+}
+.sidenav >a > img{
+    width: 30px;
+    height: 30px;
+}
+.sidenav >a> img:hover {
+    border-color:1px solid rgb(243, 121, 20);
+}
+
+.container {
+    position: relative;
+    font-family: Arial;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    background-color: var(--dark-navy);
+    padding: 0%;
+    margin-top: 20px;
+
+}
+
+/* LED Wall, Calculator , Pastel puzzles, 
+    and Run Buddy text box setting */
+.text-block {
+    background-color: var(--dark-navy);
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    text-align: left;
+    /* background-color: var(--baby-blue); */
+    /* color: var(--line); */
+    /* border:1px solid  var(--line); */
+  /* border-radius: 5px; */
+    /* line-height: 0.5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left:20px; */
+
+}
+.text-block > p{
+    text-align: left;
+}
+#main-image {
+    display: flex;
+    flex-grow: 1;
+    max-width: 700px;
+    max-height: 400px;
+    padding: 0%;
+}
+
+.smal-projects > .container >img {
+
+
+    flex-grow: 1;
+    width: 3000px;
+    height: 100px;
+    justify-content: space-between;
+}
