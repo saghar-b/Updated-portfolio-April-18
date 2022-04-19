@@ -12,71 +12,78 @@
     --fz-lg: 18px;
     --fz-xl: 20px;
     --fz-xxl: 22px;
-    --line: rgb(21, 119, 70);
+    --detailColor: #ffc107;
 
 }
+
+main img:hover {
+    filter: sepia(90%)
+}
+
+header {
+    font-size: var(--fz-xxs);
+
+}
+
+header img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    filter: sepia(90%);
+    border-radius: 50%;
+}
+
+.nav-item {
+    list-style: none;
+}
+
 
 .line {
 
-    /* width: 112px; */
     height: 100%;
 
-    border-right: 1px solid var(--light-text);
-   margin-left: 5px;
+    border-right: 1px solid;
+    margin-left: 15px;
 }
+
 .v-line {
 
-    /* width: 112px; */
     height: 30%;
-
-    border-left: 1px solid black ;
-  position: absolute;
-  left: 20px;
+    border-left: 1px solid;
+    position: absolute;
+    left: 20px;
 }
 
 aside, main {
-    /* background-color: yellow; */
-    /* height: 100%; */
     color: var(--light-text);
     font-family: var(--font-sans);
-   
+
 }
 
 aside {
-/* margin-left:5px; */
-    text-align: center;
     font-size: var(--fz-lg);
-    padding-right: 5px;
-    /* font-size:xx-large; */
-    /* margin-bottom: 30px; */
-    /* justify-content: right; */
 }
 
 
-span{
-    color: var(--line);
+span {
+    color: var(--detailColor);
     font-family: var(--font-mono);
     font-size: var();
     padding-right: 5px;
-    
-}
-.navbar> span{
-    
-    padding-right: 2px;  
 
 }
+
+.navbar>span {
+
+    padding-right: 2px;
+
+}
+
 .navbar {
-    display: list-item;
     list-style: decimal;
     color: var(--light-text);
     display: flex;
-    justify-content: space-between;
     font-family: var(--font-mono);
     font-size: var(--fz-xxs)
 }
-
-/* side nav */
-
 
 .sidenav {
     background-color: var(--no_color);
@@ -86,7 +93,6 @@ span{
     z-index: 1;
     top: 50vh;
     left: 0;
-    /* background-color: #111; */
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -107,64 +113,136 @@ span{
 
 }
 
-.sidenav a:hover {
-    width: 100px;
-    height: 100px;
-}
-.sidenav >a > img{
+.sidenav>a>img {
     width: 30px;
     height: 30px;
+
 }
-.sidenav >a> img:hover {
-    border-color:1px solid rgb(243, 121, 20);
+
+#mySidenav img:hover {
+    box-shadow: 0 0 0px 1px var(--detailColor);
+
+}
+
+#mySidenav a img:hover {
+    border-color: 5px solid var(--detailColor);
+    border-radius: 50%;
 }
 
 .container {
     position: relative;
-    font-family: Arial;
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 10px;
     background-color: var(--dark-navy);
     padding: 0%;
     margin-top: 20px;
+    margin-left: 0%;
 
 }
+.bio{
+    width: 80vh;
+}
 
-/* LED Wall, Calculator , Pastel puzzles, 
-    and Run Buddy text box setting */
+
 .text-block {
     background-color: var(--dark-navy);
     position: absolute;
     bottom: 10px;
     left: 20px;
     text-align: left;
-    /* background-color: var(--baby-blue); */
-    /* color: var(--line); */
-    /* border:1px solid  var(--line); */
-  /* border-radius: 5px; */
-    /* line-height: 0.5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left:20px; */
-
 }
-.text-block > p{
+
+.text-block>p {
     text-align: left;
 }
+
 #main-image {
-    display: flex;
-    flex-grow: 1;
-    max-width: 700px;
     max-height: 400px;
-    padding: 0%;
+    max-width: 900px;
+
 }
 
-.smal-projects > .container >img {
+.smal-projects {
+    display: flex;
+flex-direction: row;
+
+    /* height: 10vh;
+    width: 20vh; */
+
+}
+
+.smal-projects>.container>img {
 
 
-    flex-grow: 1;
-    width: 3000px;
-    height: 100px;
-    justify-content: space-between;
+    padding: 0%;
+    width: 40px;
+    height: 15px;
+}
+
+.btn {
+    background-color: aqua;
+    line-height: 1px;
+}
+
+@media screen and (max-width: 800px) {
+
+    span {
+        display: flex;
+        flex-direction: row;
+        margin-right: 20px;
+    }
+
+    .line {
+
+        width: 100%;
+        height: 1%;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 20px;
+
+        border-top: 1px solid;
+    }
+
+    header {
+        font-size: var(--fz-xxs);
+    }
+
+    .sidenav {
+        padding-right: 20px;
+    }
+
+    #main-image {
+        flex-grow: 1;
+        width: 60vh;
+        position: relative;
+        left: 5px;
+        max-height: 400px;
+        max-width: 800px;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .smal-projects {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        right: 160px;
+        justify-content: left;
+        width: 100vh;
+        max-height: 400px;
+        max-width: 800px;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .nav-item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+       
+    }
+
+
 }
